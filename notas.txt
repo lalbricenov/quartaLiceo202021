@@ -1,0 +1,14 @@
+1 hora clase
+1 hora práctica
+
+Cuaderno para tomar apuntes
+Páginas web estáticas
+    Html css
+    Javascript
+Páginas web dinámicas
+    Bases de datos
+    servidores web node.js
+Métodos numéricos
+    Solución de ecuaciones
+    Calculo de integrales
+    Solución de ecuaciones diferenciales

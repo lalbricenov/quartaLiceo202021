@@ -1,0 +1,12 @@
+h2 {
+  color: pink;
+}
+#miParrafoEspecial {
+  background-color: purple;
+}
+.conBorde {
+  border: 5px solid red;
+}
+img {
+  width: 100%;
+}
