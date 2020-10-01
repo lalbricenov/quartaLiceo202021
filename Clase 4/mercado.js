@@ -29,8 +29,10 @@ function addHeaders() {
   let enc3 = document.createElement("th");
   enc3.innerHTML = "Fecha";
 
+  fila.appendChild(enc1);
+  fila.appendChild(enc2);
+  fila.appendChild(enc3);
   tabla.appendChild(fila);
-  console.log("aqui");
 }
 
 function hacerTabla() {
@@ -71,3 +73,4 @@ function addItem() {
 }
 btn.onclick = addItem;
 hacerLista();
+hacerTabla();
