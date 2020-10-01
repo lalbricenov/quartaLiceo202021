@@ -1,5 +1,6 @@
 let compras = ["Arroz", "Lentejas", "Papas"];
 let lista = document.querySelector("#listaMercado");
+let tabla = document.querySelector("#tablaTareas");
 
 // Opcion 1, for como en C
 // for (let i = 0; i < compras.length; i++) {
@@ -19,6 +20,42 @@ function hacerLista() {
   }
 }
 
+function addHeaders() {
+  let fila = document.createElement("tr");
+  let enc1 = document.createElement("th");
+  enc1.innerHTML = "Materia";
+  let enc2 = document.createElement("th");
+  enc2.innerHTML = "Descripción";
+  let enc3 = document.createElement("th");
+  enc3.innerHTML = "Fecha";
+
+  tabla.appendChild(fila);
+  console.log("aqui");
+}
+
+function hacerTabla() {
+  tabla.innerHTML = "";
+  addHeaders();
+  for (item of compras) {
+    let fila = document.createElement("tr");
+    // Creo los datos que van en la fila
+    let tdMateria = document.createElement("td");
+    tdMateria.innerHTML = item; //en su programa esto hara referencia al dato de materia ingresado por el usuario
+    let tdDescripcion = document.createElement("td");
+    tdDescripcion.innerHTML = item; //en su programa esto hara referencia al dato de descripcion ingresado por el usuario
+    let tdFecha = document.createElement("td");
+    tdFecha.innerHTML = item; ////en su programa esto hara referencia al dato de fecha ingresado por el usuario
+
+    // Añado los nuevos datos como children de la fila
+    fila.appendChild(tdMateria);
+    fila.appendChild(tdDescripcion);
+    fila.appendChild(tdFecha);
+
+    // Añado la fila a la tabla
+    tabla.appendChild(fila);
+  }
+}
+
 let input = document.querySelector("#inputAdd");
 let btn = document.querySelector("#btnAdd");
 
@@ -28,6 +65,7 @@ function addItem() {
   let item = input.value;
   compras.push(item);
   hacerLista();
+  hacerTabla();
   //Borrar lo que el usuario escribio
   input.value = "";
 }
