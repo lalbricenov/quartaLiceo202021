@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones en html</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Ejemplos de ecuaciones en HTML</h1>
+    <p>Para escribir ecuaciones en una página web en html se puede usar MathJax. La fuerza eléctrica se puede calcular como $$\vec{F}=q\vec{E}$$</p>
+    <p>La fuerza eléctrica entre dos cargas es: 
+        $$\vec{F_{12}}=\frac{1}{4\pi\epsilon_0}$$
+    </p>
+    <h2>La circuitazione del campo elettrico é:</h2>
+    $$\Gamma(\vec{E})=\sum_{i=1}^n\vec{\Delta l}_i\cdot\vec{E}_i$$
+
+    <p>La solución de una ecuación cuadrática de la forma \(ax^2+bx+c=0\) es la siguiente: $$x_{1,2}=\frac{-b\pm\sqrt[3]{b^2-4ac}}{2a}$$</p>
+    <h2>Vamos a hacer un gráfico</h2>
+    <p>Para graficar vamos a usar plotly js.</p>
+    <div id="miPrimerGrafico"></div>
+
+    <script src="grafico.js"></script>
+</body>
+</html>
