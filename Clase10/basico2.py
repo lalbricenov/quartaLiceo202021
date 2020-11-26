@@ -70,3 +70,13 @@ def imprimirEstudiante(estudiante):
 
 imprimirEstudiante(pedro)
 imprimirEstudiante(juan)
+
+# Input del usuario
+
+nombre = input("Ingrese su nombre: ")
+print(f'Hola {nombre}')
+edad = int(input("Ingrese su edad: "))
+if edad %2 == 0:
+    print("Su edad es par")
+else:
+    print("Su edad es impar")
