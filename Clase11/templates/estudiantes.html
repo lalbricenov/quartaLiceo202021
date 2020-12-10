@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Estudiantes</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>NOMBRE</th>
+                <th>NOTA</th>
+            </tr>
+        {% for estudiante in estudiantes%}
+            <tr>
+                <td>{{estudiante.nombre}}</td>
+                <td>{{estudiante.nota}}</td>
+            </tr>
+        {%endfor%}
+        </table>
+
+    </body>
+</html>
