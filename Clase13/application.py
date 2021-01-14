@@ -5,6 +5,8 @@ app = Flask(__name__)
 
 # Variable que almacenara las tareas
 tareas = []
+# La lista de tareas debe ser una lista de diccionarios, es decir
+# cada tarea debe tener la forma> {"nombre":"Enviar correo", "fecha":"24-dic-2020"}
 
 @app.route("/")
 def tasks():
@@ -23,6 +25,8 @@ def add():
         # Si el usuario presionó el botón enviar
         # Debemos añadir la tarea a la lista
         tareaNueva = request.form.get("tarea")
+        # DEBE LEER TAMBIÉN LA FECHA EN EL FORMULARIO
+        # DEBE CONSTRUIR LA NUEVA TAREA
         tareas.append(tareaNueva)
         # Mostrar la lista de tareas
         return redirect('/')
