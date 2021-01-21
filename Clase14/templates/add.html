@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form action='/add' method='POST'>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+        <input id="apellido" name="apellido" type="text" placeholder="Apellido">
+        <input id="boton" type="submit" disabled>
+    </form>
+
+    <script>
+        // reviso si el espacio de nombre y apellido están ambos llenos
+        // si no es así, deshabilitar el botón de enviar
+        document.querySelector("form").onkeyup = function(){
+            if(document.querySelector("#nombre")==='' ||
+            document.querySelector("#apellido") ===''){
+             document.querySelector("#boton").disabled = true;
+            }else{
+                document.querySelector("#boton").disabled = false;
+            }
+        }
+    </script>
+{% endblock %}

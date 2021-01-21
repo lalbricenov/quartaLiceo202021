@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>En la siguiente tabla se muestra la lista de todas las personas.</p>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+
+        {% for persona in personas %}
+            <tr>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href='/add'>Añadir una persona</a>
+{% endblock %}
