@@ -43,6 +43,12 @@ def persona(persona_id):
 def delete(persona_id):
     # deben escribir el comando para borrar de la base de datos la persona
     # que tiene el id persona_id
+
+    # Supongamos que noté que no existe la persona que se quiere borrar
+    # Mostrar una página con un mensaje de error
+    # Por ejemplo supongamos que el usuario 20 no existe
+    if persona_id == 20:
+        return render_template('error.html', mensaje = f"La persona con el id {persona_id} no existe")
     return f'Acá se borra la persona con id {persona_id}'
 
 @app.route('/modify/<int:persona_id>')
