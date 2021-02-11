@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>En la siguiente tabla se muestra la lista de todas las personas.</p>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Edad</th>
+        </tr>
+
+        {% for persona in asistentes %}
+            <tr>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.email}}</td>
+                <td>{{persona.edad}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href='/add'>Añadir asistente</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form action='/add' method='POST'>
+        <input  name="nombre" type="text" placeholder="Nombre">
+        <input  name="email" type="email" placeholder="Email">
+        <input  name="edad" type="number" placeholder="Edad">
+        <input  type="submit">
+    </form>
+
+{% endblock %}
