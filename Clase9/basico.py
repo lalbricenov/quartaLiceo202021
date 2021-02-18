@@ -12,6 +12,7 @@ print(f"El tipo de variable de notas es {type(notas)} y su valor es {notas}")
 print(f"El tipo de variable la primera nota es {type(notas[0])} y su valor es {notas[0]}")
 print(f"El tipo de variable la segunda nota es {type(notas[1])} y su valor es {notas[1]}")
 
+# Diccionario en python
 estudiante = {"nombre":"Juan", "apellido":"Rodriguez", "edad":59, "notas":[6.7, 9.4, 7.5, 6.3 ]}
 # El apellido de Juan es Rodriguez, su edad es 59 y el promedio de sus notas es
 

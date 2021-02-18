@@ -8,15 +8,18 @@
     </form>
 
     <script>
-        // reviso si el espacio de nombre y apellido están ambos llenos
-        // si no es así, deshabilitar el botón de enviar
-        document.querySelector("form").onkeyup = function(){
-            if(document.querySelector("#nombre")==='' ||
-            document.querySelector("#apellido") ===''){
-             document.querySelector("#boton").disabled = true;
-            }else{
-                document.querySelector("#boton").disabled = false;
-            }
-        }
+// reviso si el espacio de nombre y apellido están ambos llenos
+// si no es así, deshabilitar el botón de enviar
+document.querySelector("form").onkeyup = function(){
+    console.log(document.querySelector("#nombre"))
+    console.log(document.querySelector("#apellido"))
+    if(document.querySelector("#nombre")=='' || document.querySelector("#apellido") ==''){
+     document.querySelector("#boton").disabled = true;
+    }
+    else
+    {
+        document.querySelector("#boton").disabled = false;
+    }
+}
     </script>
 {% endblock %}

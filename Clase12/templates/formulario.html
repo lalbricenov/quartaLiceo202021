@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <h1>
+            Formulario nombre y nota
+        </h1>
+        <form>
+            Nombre estudiante
+            <input type="text" name="nombre" required>
+            <br/>
+            Nota
+            <!--Validacion: verificar que los datos ingresados correspondan a valores validos -->
+            <!--Client side validation: la revision se hace en el computador del usuario-->
+            <input type="number" step='0.1' min='0' max='10'  name="nota" required>
+            <input type="submit">
+            {% if nombre != None and nombre != '' and nota != None and nota != '' %}
+            <p>El nombre ingresado fue {{nombre}} y su nota fue {{nota}}</p>
+            {% endif %}
+        </form>
+    </body>
+</html>

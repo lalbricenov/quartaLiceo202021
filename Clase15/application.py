@@ -37,6 +37,8 @@ def add():
 def persona(persona_id):
     # deben escribir el comando para obtener de la base de datos la persona
     # que tiene el id persona_id
+    asistentes = db.execute('SELECT * FROM asistentes where....')
+    # len(asistentes)==0
     return f'Acá se verán los detalles de la persona {persona_id}'
 
 @app.route('/delete/<int:persona_id>')

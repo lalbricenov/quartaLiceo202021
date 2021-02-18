@@ -27,4 +27,5 @@ listaEstudiantes = [{"nombre":"Antonio", "nota":7.8},{"nombre":"Maria", "nota":7
 
 @app.route("/estudiantes")
 def estudiantes():
+    print('El usuario quiere ver los estudiantes')
     return render_template("estudiantes.html", estudiantes=listaEstudiantes)

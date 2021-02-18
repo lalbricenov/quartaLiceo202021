@@ -25,9 +25,11 @@ def add():
         # Si el usuario presionó el botón enviar
         # Debemos añadir la tarea a la lista
         tareaNueva = request.form.get("tarea")
+        fecha = request.form.get("tarea")
+        diccionarioNuevo = {"descripcion":tareaNueva, "fecha":fecha}
         # DEBE LEER TAMBIÉN LA FECHA EN EL FORMULARIO
         # DEBE CONSTRUIR LA NUEVA TAREA
-        tareas.append(tareaNueva)
+        tareas.append(diccionarioNuevo)
         # Mostrar la lista de tareas
         return redirect('/')
 
