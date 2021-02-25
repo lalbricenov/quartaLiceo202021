@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <ul>
+        {% for tarea in tareas %}
+            <li>{{tarea}}</li>
+        {% endfor %}
+    </ul>
+    <a href='/add'>Añadir tarea</a>
+{% endblock %}

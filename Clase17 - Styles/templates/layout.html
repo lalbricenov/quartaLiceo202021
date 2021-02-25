@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Tareas</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/misEstilos.css') }}"/>
+        <style>
+            .errorLuis{
+                color:red;
+                font-size:30;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tareas</h1>
+        {% if mensaje is defined %}
+            {% if mensaje.tipo == 'error' %}
+                <p class="bg-danger text-white">{{mensaje.contenido}}</p>
+            {% elif mensaje.tipo == 'exito' %}
+                <p class="bg-success text-white">{{mensaje.contenido}}</p>
+            {% endif %}
+        {% endif %}
+        {% block body %}
+
+        {% endblock %}
+    </body>
+</html>
