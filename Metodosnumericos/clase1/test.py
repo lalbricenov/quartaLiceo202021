@@ -47,7 +47,8 @@ while n < N:
 
 plt.figure() #esto genera una figura nueva
 plt.ylim([0,1]) #esto limita el rango de la grafica en y
-plt.plot(valsX, valsY, 'o', markersize=2)
+#'o', markersize=1 indica que se van a usar puntos en cambio de lineas.
+plt.plot(valsX, valsY, 'o', markersize=1)
 plt.ylabel('Campana')
 plt.xlabel('x')
 plt.savefig("Gauss.jpg")
